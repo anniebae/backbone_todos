@@ -1,3 +1,5 @@
+console.log("Todo model");
+
 var app = app || {};
 
 app.Todo = Backbone.Model.extend({
