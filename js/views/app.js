@@ -75,7 +75,7 @@ app.AppView = Backbone.View.extend({
     };
   },
   createOnEnter: function( event ) {
-    if ( event.which !== ENTER_’KEY || !this.$input.val().trim() ) {
+    if ( event.which !== ENTER_KEY || !this.$input.val().trim() ) {
       return;
     }
     app.Todos.create( this.newAttributes() );
