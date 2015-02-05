@@ -17,7 +17,7 @@ app.AppView = Backbone.View.extend({
     this.$main = this.$('#main');
 
     this.listenTo(app.Todos, 'add', this.addOne);
-    this.listenTo(app.Todos, 'reset', this.allAll);
+    this.listenTo(app.Todos, 'reset', this.addAll);
 
     this.listenTo(app.Todos, 'change: completed', this.filterOne);
     this.listenTo(app.Todos, 'filter', this.filterAll);
@@ -57,7 +57,7 @@ app.AppView = Backbone.View.extend({
     });
     $('#todo-list').append( view.render().el );
   },
-  allAll: function() {
+  addAll: function() {
     this.$('#todo-list').html('');
     app.Todos.each(this.addOne, this);
   },
